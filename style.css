@@ -1,0 +1,144 @@
+html,
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+}
+
+.main-header {
+  background-color: #ce2c55;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pokeball-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.title {
+  margin: 0;
+  font-size: 2rem;
+  font-family: 'Orbitron', cursive;  
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 20px;
+}
+
+#card-container {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 200px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card-content h2 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.card-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.card-content li {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  font-weight: bold; 
+}
+
+.filter-section {
+  flex: 1;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  min-width: 220px;
+}
+
+.filter-section label {
+  display: block;
+  margin-top: 1rem;
+  font-size: 30px; 
+  /*font-weight: bold;*/ 
+  font-family: 'VT323', sans-serif;
+
+}
+
+.filter-section select,
+.filter-section button {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  font-size: 1rem;
+  background-color: white;
+  cursor: pointer;
+}
+
+.button-container {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .filter-section {
+    width: 100%;
+    order: -1;
+  }
+
+  #card-container {
+    justify-content: center;
+  }
+}
+
+.welcome-box {
+  background-color: #fff0f5;
+  border: 2px solid #ce2c55;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-family: cursive;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-box h2 {
+  margin-top: 0;
+  color: #ce2c55;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mat's Mons | Home</title>
+    <meta name="description" content="Buy Well-Graded Cards!" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- I included defer so I can have my JavaScript safely interact with all DOM elements-->
+    <script type="text/javascript" src="scripts.js" defer></script>
+    <!-- We have been told on Padlet that we are able to use Google's API for custom CSS fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&family=Orbitron&family=Press+Start+2P&family=VT323&family=Freckle+Face&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    
+    <header class="main-header">
+      <img class="pokeball-icon" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c861d306-8f42-4864-ab2e-61a271518c8a/df7u62z-c5464c1a-1712-465b-b903-5101339aefa2.png/v1/fill/w_1280,h_1281/transparent_poke_ball_by_ace_zeroartic_df7u62z-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MSIsInBhdGgiOiJcL2ZcL2M4NjFkMzA2LThmNDItNDg2NC1hYjJlLTYxYTI3MTUxOGM4YVwvZGY3dTYyei1jNTQ2NGMxYS0xNzEyLTQ2NWItYjkwMy01MTAxMzM5YWVmYTIucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Wm-Wjfd_pubLg35WCNoDcr1gWL3p81YR-OQR2WbMcgE" alt="Pokeball left" />
+      <h1 class="title">Mat's Mons</h1>
+      <img class="pokeball-icon" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c861d306-8f42-4864-ab2e-61a271518c8a/df7u62z-c5464c1a-1712-465b-b903-5101339aefa2.png/v1/fill/w_1280,h_1281/transparent_poke_ball_by_ace_zeroartic_df7u62z-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MSIsInBhdGgiOiJcL2ZcL2M4NjFkMzA2LThmNDItNDg2NC1hYjJlLTYxYTI3MTUxOGM4YVwvZGY3dTYyei1jNTQ2NGMxYS0xNzEyLTQ2NWItYjkwMy01MTAxMzM5YWVmYTIucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Wm-Wjfd_pubLg35WCNoDcr1gWL3p81YR-OQR2WbMcgE" alt="Pokeball right" />
+    </header>
+
+  <!-- The reason why I have main content here is so that I could organize the cards and the operators -->
+  <!-- in two sides of the website. -->
+  <div class="main-content"> 
+
+    <!-- This is the card container.-->
+    <div id="card-container"></div>
+
+    <!-- Below is the filter section for what type of cards are introduced with their properties. -->
+    <div class="filter-section">
+
+      <div class="welcome-box">
+        <h2>Hello and Welcome to Mat's Mons!</h2>
+        <p>
+          Here, you can check out, as well as purchase Pokémon cards of your liking! If you would like to filter or sort through the card's properties, you are more than welcome to do so below by using the drop-down filter menus and buttons for sorting.
+        </p>
+        <p>Thank you and enjoy!</p>
+      </div>
+
+      <label for="typeFilter">Filter by Type:</label>
+      <select id="typeFilter">
+        <option value="">All</option>
+        <option value="grass">Grass</option>
+        <option value="fire">Fire</option>
+        <option value="water">Water</option>
+        <option value="lightning">Lightning</option>
+        <option value="psychic">Psychic</option>
+        <option value="fighting">Fighting</option>
+        <option value="darkness">Darkness</option>
+        <option value="metal">Metal</option>
+        <option value="colorless">Colorless</option>
+        <option value="fairy">Fairy</option>
+        <option value="dragon">Dragon</option>
+      </select>
+    
+      <label for="stageFilter">Filter by Stage:</label>
+      <select id="stageFilter">
+        <option value="">All</option>
+        <option value="Basic">Basic</option>
+        <option value="Stage 1">Stage 1</option>
+        <option value="Stage 2">Stage 2</option>
+        <option value="ex">ex</option>
+        <option value="EX">EX</option>
+        <option value="Mega EX">Mega EX</option>
+      </select>
+
+    <!-- The buttons -->
+    <div class="button-container">
+      <button onclick="sortCost();">Sort by Cost</button>
+      <button onclick="sortType();">Sort by Type</button>
+      <button onclick="sortStage();">Sort by Stage</button>
+    </div>
+
+  </div>
+  
+    <!-- Hidden card template -->
+    <div class="card" style="display: none">
+      <div class="card-content">
+        <h2>Card Title</h2>
+        <img src="" alt="Card Poster" />
+        <ul>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
